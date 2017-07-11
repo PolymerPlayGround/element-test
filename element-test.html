@@ -3,7 +3,7 @@
 <dom-module id="element-test">
   <template>
     <style>
-      :host {
+       :host {
         display: block;
       }
     </style>
@@ -28,6 +28,9 @@
             value: 'element-test'
           }
         };
+      }
+      fireEvent() {
+        this.dispatchEvent(new CustomEvent('test-event', { detail: 'tested!' }));
       }
     }
 
